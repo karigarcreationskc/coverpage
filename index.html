@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karigar Creations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc00;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Devnagari', sans-serif;
+            font-size: 2.5em;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header .background-wheel {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            opacity: 0.1;
+            animation: rotate 30s linear infinite;
+        }
+        @keyframes rotate {
+            from {transform: translateX(-50%) rotate(0deg);}
+            to {transform: translateX(-50%) rotate(360deg);}
+        }
+        .container {
+            padding: 20px;
+        }
+        .about, .portfolio, .contact {
+            margin: 20px 0;
+        }
+        .about h2, .portfolio h2, .contact h2 {
+            color: #ffcc00;
+            text-align: center;
+            font-size: 2em;
+        }
+        .about p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .portfolio img {
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact form input, .contact form textarea {
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #e6b800;
+        }
+        footer {
+            background-color: #ffcc00;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Karigar Creations</h1>
+        <img src="konark-wheel.png" alt="Konark Temple Wheel" class="background-wheel" width="500">
+    </header>
+    <div class="container">
+        <section class="about">
+            <h2>About Us</h2>
+            <p>At Karigar Creations, we design and innovate unique gifting solutions. Our passion lies in creating beautiful resin art pieces, including keyrings, jewellery, furniture, and plates. Each piece is meticulously crafted to provide a perfect blend of tradition and modernity.</p>
+        </section>
+        <section class="portfolio">
+            <h2>Our Work</h2>
+            <img src="resin-keyring.jpg" alt="Resin Keyring">
+            <img src="resin-jewellery.jpg" alt="Resin Jewellery">
+            <img src="resin-furniture.jpg" alt="Resin Furniture">
+            <img src="resin-plate.jpg" alt="Resin Plate">
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Karigar Creations. All rights reserved.
+    </footer>
+</body>
+</html>
